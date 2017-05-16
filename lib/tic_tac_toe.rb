@@ -85,7 +85,7 @@ class TicTacToe
   end
 
   def over?
-    full? || won?
+    draw? || won?
   end
 
   def winner
@@ -95,14 +95,7 @@ class TicTacToe
   end
 
   def play
-
-    until over? do
-      turn
-
-      if draw?
-        break
-      end
-    end
+    turn until over?
 
     if draw?
       puts "Cat's Game!"
